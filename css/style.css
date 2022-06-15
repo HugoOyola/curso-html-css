@@ -1,0 +1,109 @@
+/* @font-face{
+  font-family: 'Charter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/charter/charter-regular.eot');
+}
+
+@font-face{
+  font-family: 'Charter Italic';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/charter/charter-italic.eot');
+}
+
+@font-face{
+  font-family: 'Charter Bold';
+  font-style: bold;
+  font-weight: bold;
+  src: url('../fonts/charter/charter-bold.eot');
+}
+
+@font-face{
+  font-family: 'Charter Bold Italic';
+  font-style: italic;
+  font-weight: bold;
+  src: url('../fonts/charter/charter-bold-italic.eot');
+} */
+
+:root {
+  font-size: 18px;
+  --gray30: #212121;
+  --gray20: #212429;
+  --gray10: #616161;
+}
+
+::selection {
+  background: gray;
+  color: white;
+}
+
+body {
+  color: var(--gray30);
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  color: var(--gray30);
+}
+
+header {
+  /* --gray10: red; */
+  font-size: 14px;
+  color: var(--gray10);
+}
+
+header a {
+  color: var(--gray10);
+  text-decoration: none;
+}
+
+header a:hover {
+  color: var(--gray30);
+}
+
+nav details summary {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 60px;
+  /* font-size: 3.75em; */
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+pre {
+  background: #fec62e;
+}
+
+.hero {
+  height: 350px;
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.3), transparent), url("../images/pattern.png");
+}
+
+.section-content {
+  counter-reset: titleList;
+}
+
+.section-content h3 {
+  counter-increment: titleList;
+}
+
+.section-content h3::before {
+  content: counter(titleList, decimal) ". ";
+}
+
+.section-content h3::after {
+  display: inline-block;
+  content: "";
+  width: 32px;
+  height: 4px;
+  background: var(--gray30);
+}
