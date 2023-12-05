@@ -49,24 +49,26 @@ a {
   color: var(--white30);
 }
 
-.header {
+/* .header {
   position: sticky;
   inset-block-start: -45px;
-}
+} */
 
 .header-content {
-  position: relative;
-  inset-block-start: 65px;
+  padding-inline: 20px;
+  /* position: relative;
+  inset-block-start: 65px; */
 }
 
 header {
+  margin-block-start: 20px;
   /* --white10: red; */
   font-size: 14px;
   color: var(--white);
-  position: absolute;
-  inset-block-start: 0;
-  inset-inline-start: -208px;
-  inline-size: 188px;
+  /* position: absolute; */
+  /* inset-block-start: 0;
+  inset-inline-start: -208px; */
+  /* inline-size: 188px; */
 }
 
 header li {
@@ -94,8 +96,8 @@ h3 {
 }
 
 h1 {
-  font-size: 60px;
-  margin-block-start: 64px;
+  font-size: 40px;
+  margin-block-start: 20px;
   margin-block-end: 16px;
   /* font-size: 3.75em; */
 }
@@ -128,7 +130,7 @@ p {
 }
 
 .hero {
-  height: 350px;
+  block-size: 60px;
   background: linear-gradient(96.07deg, #314755 30.63%, #26a0da 102.18%);
 }
 
@@ -248,4 +250,35 @@ blockquote p {
 
 .fomr input::-webkit-input-placeholder {
   color: var(--white20);
+}
+
+@media screen and (min-width: 1366px) {
+  .header {
+    position: sticky;
+    inset-block-start: -45px;
+  }
+
+  .header-content {
+    position: relative;
+    inset-block-start: 65px;
+    padding-inline: 0;
+  }
+
+  header {
+    font-size: 14px;
+    color: var(--white);
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: -208px;
+    inline-size: 188px;
+  }
+
+  .hero {
+    block-size: 350px;
+  }
+
+  h1 {
+    font-size: 60px;
+    margin-block-start: 64px;
+  }
 }
